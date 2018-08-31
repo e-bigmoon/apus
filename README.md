@@ -12,11 +12,12 @@ Prepare a SSL certificate and a key, and replace the values of `tlsCertificate` 
 
 Now you can start a server:
 
-``````shell
+```shell
 $ mkdir data
 $ cp config.yaml.sample config.yaml
 
 $ openssl req -new -x509 -sha256 -days 36500 -newkey rsa:4096 -out localhost.crt -keyout localhost.key
+# enter passphrase
 $ openssl rsa -in localhost.key -out localhost.key
 
 $ stack build
