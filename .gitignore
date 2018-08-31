@@ -11,6 +11,7 @@ cabal.sandbox.config
 cabal.config
 .stack-work
 .bash_history
+apus.cabal
 
 # =========================
 # Operating System Files
@@ -58,3 +59,9 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# sensitive data
+data
+localhost.crt
+localhost.key
+config.yaml
