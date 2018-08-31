@@ -21,7 +21,7 @@ $ openssl req -new -x509 -sha256 -days 36500 -newkey rsa:4096 -out localhost.crt
 $ openssl rsa -in localhost.key -out localhost.key
 
 $ stack build
-$ stack exec apus-exe config.yaml
+$ stack exec apus config.yaml
 ```
 
 - [Chrome58以降でハネられないSHA-2でオレオレ認証局署名のあるオレオレ証明書](https://qiita.com/mkgask/items/8d66dcada58a485e3585)

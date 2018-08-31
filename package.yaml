@@ -55,7 +55,7 @@ default-extensions:
 - LambdaCase
 
 executables:
-  apus-exe:
+  apus:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
