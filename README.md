@@ -12,7 +12,15 @@ Prepare a SSL certificate and a key, and replace the values of `tlsCertificate` 
 
 Now you can start a server:
 
+``````shell
+$ mkdir data
+$ cp config.yaml.sample config.yaml
+
+$ openssl req -new -x509 -sha256 -days 36500 -newkey rsa:4096 -out localhost.crt -keyout localhost.key
+$ openssl rsa -in localhost.key -out localhost.key
+
+$ stack build
+$ stack exec apus-exe config.yaml
 ```
-stack build
-stack exec apus-exe config.yaml
-```
+
+- [Chrome58以降でハネられないSHA-2でオレオレ認証局署名のあるオレオレ証明書](https://qiita.com/mkgask/items/8d66dcada58a485e3585)
